@@ -71,13 +71,13 @@
 							"sudo rpm -ivh *.rpm\n",
 							"sudo mkdir /etc/chef\n",
 							"cd /etc/chef\n",
-							"wget https://s3-us-west-2.amazonaws.com/frmccdbucket/client.rb\n",
-							"wget https://s3-us-west-2.amazonaws.com/frmccdbucket/knife.rb\n",
-							"wget https://s3-us-west-2.amazonaws.com/frmccdbucket/susheel068.pem\n",
+							"wget https://s3-us-west-2.amazonaws.com/cftchef0/client.rb\n",
+							"wget https://s3-us-west-2.amazonaws.com/cftchef0/knife.rb\n",
+							"wget https://s3-us-west-2.amazonaws.com/cftchef0/nikhil0706.pem\n",
 							"sudo chmod 400 susheel068.pem\n",
 							"sudo chef-client -o recipe[test::docs_example]\n",
 							"cd /opt/tomcat_docs/webapps\n",
-							"sudo wget http://34.209.64.226:8080/nexus-2.14.4-03/service/local/repositories/releases/content/org/sonatype/mavenbook/simple_webapp/3.1/simple_webapp-3.1.war\n",
+							"sudo wget http://192.168.33.37:8081/nexus/service/local/repositories/snapshots/content/org/sonatype/mavenbook/multispring/simple-webapp/0.8-SNAPSHOT/simple-webapp-0.8-20170731.214132-1.war",
 							"sudo service tomcat_docs restart\n",
 							"/opt/aws/bin/cfn-signal -e 0 -r \"ChefClient setup complete\" '", {
 							"Ref": "WaitHandle"
